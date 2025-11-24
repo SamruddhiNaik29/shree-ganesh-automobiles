@@ -1,0 +1,263 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-page {
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #1c1c1c;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* .nav-link li a:hover {
+  color: #ff9800;
+} */
+
+.nav-link li button.login-btn {
+  background-color: #ff5722;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-link li button.login-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #ff5722;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #ffccbc;
+  color: #1c1c1c;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.features h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: #ff5722;
+  letter-spacing: 1px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual Card */
+.card {
+  background: darkgoldenrod;
+  border-radius: 20px;
+  width: 260px;
+  padding: 2rem;
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); */
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Card icon */
+.card-icon {
+  font-size: 3rem;
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+/* Card title */
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #d84315;
+  font-weight: 600;
+}
+
+/* Card description */
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #302525;
+}
+
+/* Subtle hover overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 152, 0, 0.05);
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.card:hover::before {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablet: ≤ 900px */
+@media screen and (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .feature-cards {
+    gap: 1rem;
+  }
+
+  .card {
+    width: 45%;
+    padding: 1.8rem;
+  }
+
+  .navbar {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Mobile: ≤ 600px */
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .navbar .logo h2 {
+    font-size: 1rem;
+  }
+}

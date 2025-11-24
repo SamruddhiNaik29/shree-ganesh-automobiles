@@ -1,0 +1,32 @@
+.invoice-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  margin: 0 auto;
+  padding: 8mm;
+  box-sizing: border-box;
+  overflow: hidden; /* important */
+  border: none;
+}
+
+.invoice-page:last-child {
+  page-break-after: auto;
+}
+
+.invoice-page * {
+  page-break-inside: avoid !important;
+  overflow: visible !important;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .invoice-page {
+    page-break-after: always;
+  }
+  .invoice-page:last-child {
+    page-break-after: auto;
+  }
+}
